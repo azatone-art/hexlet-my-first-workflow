@@ -1,12 +1,7 @@
-# file: .github/workflows/show-directory.yml
-name: say hello
-# on – определяет события, которые запускают воркфлоу
-on: push
+name: say-hello
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
   build:
-    # операционная система для работы воркфлоу
     runs-on: ubuntu-latest
-    steps: # список шагов, которые надо выполнить
+    steps:
+      - uses: actions/checkout@v4
       - run: make say-hello
